@@ -12,33 +12,6 @@ import time,random,sys,json,codecs,threading,glob,re
 cl = LINETCR.LINE()
 cl.login(qr=True)
 
-ki = LINETCR.LINE()
-ki.login(qr=True)
-
-kk = LINETCR.LINE()
-kk.login(qr=True)
-
-kc = LINETCR.LINE()
-kc.login(qr=True)
-
-ks = LINETCR.LINE()
-ks.login(qr=True)
-
-ka = LINETCR.LINE()
-ka.login(qr=True)
-
-kb = LINETCR.LINE()
-kb.login(qr=True)
-
-ko = LINETCR.LINE()
-ko.login(qr=True)
-
-ke = LINETCR.LINE()
-ke.login(qr=True)
-
-ku = LINETCR.LINE()
-ku.login(qr=True)
-
 cl
 
 print "login success"
