@@ -45,7 +45,7 @@ print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" [R.A] BOT Menu V.3  􀔃􀄆red check mark􏿿
+helpMessage =""" Sakau Bot  􀔃􀄆red check mark􏿿
 
 􀔃􀅕red arrow right􏿿 Command Public
 [Me]       Cek Akun Sendiri
@@ -103,33 +103,33 @@ Gmid = ko.getProfile().mid
 Hmid = ke.getProfile().mid
 Imid = ku.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,"u33d60593ad472ed11e7907fb1daee6ae"]
-admin=["u33d60593ad472ed11e7907fb1daee6ae"]
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,"u09d040c087fb06dfbdd1c0d24c55b774"]
+admin=["u09d040c087fb06dfbdd1c0d24c55b774"]
 wait = {
-    'contact':False,
+    'contact':True,
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
     'timeline':False,
-    'autoAdd':False,
+    'autoAdd':True,
     'message':"Thanks for add me",
     "lang":"JP",
     "comment":"Thanks for add me",
-    "commentOn":False,
+    "commentOn":True,
     "commentBlack":{},
     "wblack":False,
     "dblack":False,
-    "clock":False,
-    "cName":" ",
-    "cName2":"[R.A]_SX2 ",
-    "cName3":"[R.A]_SX3 ",
-    "cName4":"[R.A]_SX4 ",
-    "cName5":"[R.A]_SX5 ",
-    "cName6":"[R.A]_SX6 ",
-    "cName7":"[R.A]_SX7 ",
-    "cName8":"[R.A]_SX8 ",
-    "cName9":"[R.A]_SX9 ",
-    "cName10":"[R.A]_SX10 ",
+    "clock":True,
+    "cName":"Sakau Bot ",
+    "cName2":"Sakau Bot2 ",
+    "cName3":"Sakau Bot3 ",
+    "cName4":"Sakau Bot4 ",
+    "cName5":"Sakau Bot5 ",
+    "cName6":"Sakau Bot6 ",
+    "cName7":"Sakau Bot7 ",
+    "cName8":"Sakau Bot8 ",
+    "cName9":"Sakau Bot9 ",
+    "cName10":"Sakau Bot10 ",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
@@ -1227,7 +1227,7 @@ def bot(op):
                 kk.sendText(msg.to,msg.to)
             elif "My mid" == msg.text:
                 random.choice(KAC).sendText(msg.to, msg.from_)
-            elif "Mid RA" == msg.text:
+            elif "Mid Sakau Bot" == msg.text:
                 cl.sendText(msg.to,mid)
                 ki.sendText(msg.to,Amid)
                 kk.sendText(msg.to,Bmid)
@@ -1237,13 +1237,13 @@ def bot(op):
                 kb.sendText(msg.to,Fmid)
                 ko.sendText(msg.to,Gmid)
                 ke.sendText(msg.to,Hmid)
-            elif "RA 1" == msg.text:
+            elif "Sakau Bot 1" == msg.text:
                 cl.sendText(msg.to,mid)
-            elif "RA 2" == msg.text:
+            elif "Sakau Bot 2" == msg.text:
                 ki.sendText(msg.to,Amid)
-            elif "RA 3" == msg.text:
+            elif "Sakau Bot 3" == msg.text:
                 kk.sendText(msg.to,Bmid)
-            elif "RA 4" == msg.text:
+            elif "Sakau Bot 4" == msg.text:
                 kc.sendText(msg.to,Cmid)
             elif msg.text in ["Wkwkwk","Wkwk","Wk","wkwkwk","wkwk","wk"]:
                 msg.contentType = 7
