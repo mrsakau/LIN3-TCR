@@ -13,13 +13,17 @@ cl = LINETCR.LINE()
 cl.login(qr=True)
 cl.loginResult()
 
-ki = kk = kc = ks = ka = kb = ko = ke = ku = cl
+ki = LINETCR.LINE()
+ki.login(qr=True)
+ki.loginResult()
+
+kk = kc = ks = ka = kb = ko = ke = ku = cl
 
 print "login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage =""" Sakau Bot  􀔃􀄆red check mark􏿿
+helpMessage =""" SAKAU BOT Menu  􀔃􀄆red check mark􏿿
 
 􀔃􀅕red arrow right􏿿 Command Public
 [Me]       Cek Akun Sendiri
@@ -77,30 +81,31 @@ Gmid = ko.getProfile().mid
 Hmid = ke.getProfile().mid
 Imid = ku.getProfile().mid
 
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,"u09d040c087fb06dfbdd1c0d24c55b774"]
-admin=["u09d040c087fb06dfbdd1c0d24c55b774"]
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,"u2c1b0efa99dcaefceced1d047f4a63f0"]
+admin=["u2c1b0efa99dcaefceced1d047f4a63f0"]
 wait = {
-    'contact':False,
+    'contact':True,
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
     'leaveRoom':True,
-    'timeline':False,
-    'autoAdd':False,
+    'timeline':True,
+    'autoAdd':True,
     'message':"Thanks for add me",
     "lang":"JP",
     "comment":"Thanks for add me",
-    "commentOn":False,
+    "commentOn":True,
     "commentBlack":{},
-    "wblack":False,
-    "dblack":False,
+    "wblack":True,
+    "dblack":True,
     "clock":True,
-    "cName":"Sakau Bot ",
+    "cName":"Sakau 1 ",
+    "cName2":"Sakau 2 ",
     "blacklist":{},
-    "wblacklist":False,
-    "dblacklist":False,
-    "Protectgr":False,
-    "Protectjoin":False,
-    "Protectcancl":False,
+    "wblacklist":True,
+    "dblacklist":True,
+    "Protectgr":True,
+    "Protectjoin":True,
+    "Protectcancl":True,
     "protectionOn":True,
     "atjointicket":True,
     }
@@ -2459,6 +2464,26 @@ def nameUpdate():
         except:
             pass
 thread2 = threading.Thread(target=nameUpdate)
+thread2.daemon = True
+thread2.start()
+
+
+def autolike():
+     for zx in range(0,20):
+        hasil = cl.activity(limit=20)
+        if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
+          try:    
+            cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Like back yaa..")
+            ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
+            ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Like back yaa..")
+            print "Like"
+          except:
+            pass
+        else:
+            print "Already Liked"
+     time.sleep(500)
+thread2 = threading.Thread(target=autolike)
 thread2.daemon = True
 thread2.start()
 
